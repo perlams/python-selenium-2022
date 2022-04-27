@@ -10,7 +10,7 @@ def test_positive():
 
 def test_negative():
     result = es_par(3,9)
-    assert not result
+    assert result, "Los numeros no son pares"
 
 def test_negative_mixed_params():
     result = es_par(2,3)
