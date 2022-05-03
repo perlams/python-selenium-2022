@@ -40,6 +40,12 @@ emailTxtField: WebElement = driver.find_element(By.ID, "input-email")
 assert emailTxtField.is_displayed(), "El textfield de email no esta disponible"
 emailTxtField.send_keys("abcd")
 
+# Localizar el elemento del textfield del password e interactuar con el
+time.sleep(2)
+passwordTxtField: WebElement = driver.find_element(By.ID, "input-password")
+assert passwordTxtField.is_displayed(), "El textfield de email no esta disponible"
+passwordTxtField.send_keys("abcd")
+
 # Localizar el elemento del boton de Login e interactuar con el
 time.sleep(2)
 loginBtn: WebElement = driver.find_element(By.XPATH, "//input[@type='submit']")
