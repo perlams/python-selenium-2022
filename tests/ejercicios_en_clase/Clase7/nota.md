@@ -1,0 +1,1 @@
+No hubo ejercicio ese día solo repaso y evaluacion
