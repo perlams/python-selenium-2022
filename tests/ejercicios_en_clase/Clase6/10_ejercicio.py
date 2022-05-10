@@ -38,5 +38,5 @@ assert wait.until(EC.visibility_of_element_located(message)), "Message was not v
 # Wait for invisibility
 assert wait.until(EC.invisibility_of_element_located(message)), "Message did not disappear"
 
-# Cerrar navegador
+# Close browser
 driver.quit()
