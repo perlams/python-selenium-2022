@@ -15,8 +15,8 @@ from selenium.webdriver.remote.webelement import WebElement
 chrome_driver_path = '../../../drivers/chromedriver'
 gecko_driver_path = '../../../drivers/geckodriver'
 url = 'https://laboratorio.qaminds.com/'
-service = Service(chrome_driver_path)
-driver = webdriver.Chrome(service=service)
+service = Service(gecko_driver_path)
+driver = webdriver.Firefox(service=service)
 driver.maximize_window()
 
 # Abrir pagina

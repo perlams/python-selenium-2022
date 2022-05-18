@@ -7,20 +7,25 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from lib.factory.factory_driver import get_driver
+from lib.config import config
+
+config.load_config()
+print(config.get_implicit_wait())
 
 driver: WebDriver = None
 
 
 def setup():
     global driver
-    driver = get_driver("chrome")
+    config.load_config()
+    driver = get_driver()
     driver.maximize_window()
-    driver.implicitly_wait(15)
+    driver.implicitly_wait(config.get_implicit_wait())
 
 
 def test_search_Iphone():
-    url = 'https://laboratorio.qaminds.com/'
     # Abrir pagina
+    url = 'https://laboratorio.qaminds.com/'
     driver.get(url)
     searchInput = driver.find_element(By.NAME, "search")
     assert searchInput.is_displayed(), "barra no disponible"
@@ -71,7 +76,7 @@ def test_search_Windows():
     assert windowsOption.is_displayed(), "Opcion Windows no disponible"
     windowsOption.click()
 
-    # Localizar el elemento del mensaje y verificarl
+    # Localizar el elemento del mensaje y verificar
     message = driver.find_element(By.XPATH, "//*[@id='content']/p")
     assert message.is_displayed(), "Mensaje no disponible"
     assert message.text == "There are no products to list in this category."

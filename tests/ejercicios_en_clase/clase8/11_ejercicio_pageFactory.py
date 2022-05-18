@@ -2,16 +2,21 @@
 # Utilizando Page Factory poder llamar al browser especifico con llamar a la funcion de get_drver
 
 import time
+from selenium.webdriver.remote.webdriver import WebDriver
 from lib.factory.factory_driver import get_driver
 
-# Call the Page Factory
-driver = get_driver("chRome")
-#driver = get_driver("FireFox")
+class TestPageFactory:
 
-# Open Web Page
-url = 'https://qamindslab.com'
-driver.get(url)
-time.sleep(3)
+    def setup_method(self):
+        # Call the Page Factory
 
-# Close browser
-driver.quit()
+        #driver = get_driver()
+        self.driver: WebDriver = get_driver()
+
+        # Open Web Page
+        url = 'https://qamindslab.com'
+        self.driver.get(url)
+        time.sleep(3)
+
+        # Close browser
+        self.driver.quit()
