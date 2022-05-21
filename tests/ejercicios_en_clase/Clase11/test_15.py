@@ -26,7 +26,7 @@ class TestCurrency:
         # Abrir la pagina Web
         self.driver.get((config.get_url()))
 
-    def test_currency(self):
+    def test_display_search(self):
         # Verificar que el simbolo selecionado es $
         currency_loc = (By.CSS_SELECTOR, ".btn-link>strong")
         assert self.wait.until(
@@ -58,7 +58,7 @@ class TestCurrency:
         currencyDD: WebElement = self.wait.until(EC.element_to_be_clickable(currency_loc))
         currencyDD.click()
 
-        # Select Euro currency
+        # Select Euro
         euroCurr_loc = (By.NAME, "EUR")
         euroCurr: WebElement = self.wait.until(EC.element_to_be_clickable(euroCurr_loc))
         euroCurr.click()
