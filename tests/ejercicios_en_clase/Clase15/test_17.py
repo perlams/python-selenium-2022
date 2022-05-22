@@ -14,7 +14,7 @@ class TestLoginPage:
 
     def test_invalid_login(self):
         self.login_page.login("username", "pass")
-       # assert self.login_page.is_login_warn_displayed(), "Warn should be displayed"
+        assert self.login_page.is_login_warn_displayed(), "Warn should be displayed"
 
     def test_forgotten_password(self):
         self.login_page.forgotten_password()

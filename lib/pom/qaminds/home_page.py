@@ -6,6 +6,7 @@ from lib.pom.common.base_page import BasePage
 
 
 class HomePage(BasePage):
+
     _logo = (By.ID, 'logo')
     _input_search = (By.NAME, 'search')
     _button_search = (By.XPATH, "//div[@id='search']//button")

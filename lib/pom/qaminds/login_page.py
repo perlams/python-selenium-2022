@@ -6,6 +6,7 @@ from lib.pom.common.base_page import BasePage
 
 
 class LoginPage(BasePage):
+
     _emailField = (By.ID, "input-email")
     _passwordField = (By.ID, "input-password")
     _forgot_password = (By.LINK_TEXT, "Forgotten Password")
