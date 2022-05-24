@@ -9,8 +9,8 @@ class TestLoginPage:
 
     def setup_method(self):
         self.driver: WebDriver = get_driver()
-        login_page = LoginPage(self.driver)
-        login_page.goto("https://laboratorio.qaminds.com/index.php?route=account/login")
+        self.login_page = LoginPage(self.driver)
+        self.login_page.goto("https://laboratorio.qaminds.com/index.php?route=account/login")
 
     def test_invalid_login(self):
         self.login_page.login("username", "pass")

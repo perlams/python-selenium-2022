@@ -12,7 +12,7 @@ class LoginPage(BasePage):
     _forgot_password = (By.LINK_TEXT, "Forgotten Password")
     _loginBtn = (By.XPATH, "//input[@value ='Login']")
     _continueBtn = (By.LINK_TEXT, "Continue")
-    _alert = (By.NAME, 'alert-danger')
+    _alert = (By.CLASS_NAME, 'alert-danger')
 
     def __init__(self, driver: WebDriver):
         wait: WebDriverWait = WebDriverWait(driver, config.get_explicit_wait_medium())
