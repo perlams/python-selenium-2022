@@ -8,6 +8,7 @@ from lib.pom.common.base_page import BasePage
 
 
 class ProductPage(BasePage):
+    # Locators
     _product_name_loc = (By.XPATH, '//*[@id="content"]//h1')
     _product_price_loc = (By.XPATH, '//*[@id="content"]//li[1]/h2')
     _ex_tax_loc = (By.XPATH, '//*[@id="content"]/div/div[2]/ul[2]/li[2]')

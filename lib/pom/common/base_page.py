@@ -65,3 +65,4 @@ class BasePage:
 
     def _get_elements(self, locator: tuple) -> list:
         return self._driver.find_elements(*locator)
+
