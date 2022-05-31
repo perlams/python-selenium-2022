@@ -18,7 +18,7 @@ class TestProductPage:
         assert self.product_page.get_description() == description
         assert self.product_page.get_price() == '$242.00'
         assert self.product_page.get_ex_tax() == '$200.00'
-        assert self.product_page.get_product_code() == 'Product 6'
+        assert self.product_page.get_product_code() == 'test_product 6'
         assert self.product_page.get_availability() == 'In Stock'
 
     def test_add_to_cart(self):

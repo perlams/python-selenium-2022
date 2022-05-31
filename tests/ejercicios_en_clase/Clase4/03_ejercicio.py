@@ -1,7 +1,7 @@
 #Ejercicio 3:
 #Ir a la página https://laboratorio.qaminds.com/
 #Escribir un script que:
-#Desde la página principal pueda ir a la sección Login
+#Desde la página principal pueda ir a la sección test_login
 #Dado un login invalido se muestre un cartel de error con el mensaje:
 #“Warning: No match for E-Mail Address and/or Password.”
 
@@ -30,8 +30,8 @@ myAccountMenu.click()
 
 # Localizar el elemento del link de la opcion del Menu e interactuar con el
 time.sleep(2)
-loginOption: WebElement = driver.find_element(By.LINK_TEXT, "Login")
-assert loginOption.is_displayed(), "Menu Login no disponible"
+loginOption: WebElement = driver.find_element(By.LINK_TEXT, "test_login")
+assert loginOption.is_displayed(), "Menu test_login no disponible"
 loginOption.click()
 
 # Localizar el elemento del textfield del email e interactuar con el
@@ -46,13 +46,13 @@ passwordTxtField: WebElement = driver.find_element(By.ID, "input-password")
 assert passwordTxtField.is_displayed(), "El textfield de email no esta disponible"
 passwordTxtField.send_keys("abcd")
 
-# Localizar el elemento del boton de Login e interactuar con el
+# Localizar el elemento del boton de test_login e interactuar con el
 time.sleep(2)
 loginBtn: WebElement = driver.find_element(By.XPATH, "//input[@type='submit']")
-assert loginBtn.is_displayed(), "Boton de Login no disponible"
+assert loginBtn.is_displayed(), "Boton de test_login no disponible"
 loginBtn.click()
 
-# Localizar el elemento del warning de Login
+# Localizar el elemento del warning de test_login
 time.sleep(2)
 warning: WebElement = driver.find_element(By.XPATH, "//*[@id='account-login']/div[1]")
 assert warning.is_displayed(), "Warning no disponible"

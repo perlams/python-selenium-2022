@@ -46,7 +46,7 @@ continueBtn: WebElement = driver.find_element(By.CSS_SELECTOR, ".btn-primary")
 assert continueBtn.is_displayed(), "Boton de Continue no disponible"
 continueBtn.click()
 
-# Localizar el elemento Logo de la pagina de Home y verificarla
+# Localizar el elemento Logo de la pagina de test_home y verificarla
 time.sleep(2)
 logoImg: WebElement = driver.find_element(By.ID, "logo")
 assert logoImg.is_displayed(), "Logo no disponible"

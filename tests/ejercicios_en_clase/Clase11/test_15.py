@@ -32,13 +32,13 @@ class TestCurrency:
         assert self.wait.until(
             EC.text_to_be_present_in_element(currency_loc, "$")), "The default dollar currency is not set"
 
-        # Search Input
+        # test_search Input
         searchInput_loc = (By.NAME, "search")
         searchInput: WebElement = self.wait.until(EC.element_to_be_clickable(searchInput_loc))
         searchInput.clear()
         searchInput.send_keys("Samsung")
 
-        # Search Button
+        # test_search Button
         lookUpBtn_loc = (By.CSS_SELECTOR, ".btn-default")
         lookUpBtn: WebElement = self.wait.until(EC.element_to_be_clickable(lookUpBtn_loc))
         lookUpBtn.click()

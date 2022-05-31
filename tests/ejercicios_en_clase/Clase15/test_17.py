@@ -23,7 +23,7 @@ class TestLoginPage:
         self.login_page.continue_as_new_customer()
 
     def test_select_menu(self):
-        for menu in ['Login', 'Register', 'My Account', 'Address Book', 'Downloads']:
+        for menu in ['test_login', 'test_register', 'My Account', 'Address Book', 'Downloads']:
             self.login_page.select_menu(menu)
 
     def teardown_method(self):

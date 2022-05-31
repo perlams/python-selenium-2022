@@ -20,13 +20,13 @@ class TestSearch:
         self.driver.get((config.get_url()))
 
     def test_search_for_a_valid_product(self):
-        # Search Input
+        # test_search Input
         searchInput_loc = (By.NAME, "search")
         searchInput: WebElement = self.wait.until(EC.element_to_be_clickable(searchInput_loc))
         searchInput.clear()
         searchInput.send_keys("Samsung")
 
-        # Search Button
+        # test_search Button
         lookUpBtn_loc = (By.CSS_SELECTOR, ".btn-default")
         lookUpBtn: WebElement = self.wait.until(EC.element_to_be_clickable(lookUpBtn_loc))
         lookUpBtn.click()
@@ -37,13 +37,13 @@ class TestSearch:
         syncMaster.click()
 
     def test_search_for_non_existing_product(self):
-        # Search Input
+        # test_search Input
         searchInput_loc = (By.NAME, "search")
         searchInput: WebElement = self.wait.until(EC.element_to_be_clickable(searchInput_loc))
         searchInput.clear()
         searchInput.send_keys("Display")
 
-        # Search Button
+        # test_search Button
         lookUpBtn_loc = (By.CSS_SELECTOR, ".btn-default")
         lookUpBtn: WebElement = self.wait.until(EC.element_to_be_clickable(lookUpBtn_loc))
         lookUpBtn.click()

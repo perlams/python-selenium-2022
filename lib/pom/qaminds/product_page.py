@@ -20,7 +20,7 @@ class ProductPage(BasePage):
     _alert_loc = (By.CLASS_NAME, "alert-success")
 
     def __init__(self, driver: WebDriver):
-        wait: WebDriverWait = WebDriverWait(driver, config.get_explicit_wait_medium())
+        wait: WebDriverWait = WebDriverWait(driver, config.get_explicit_wait_large())
         super().__init__(driver, wait)
 
     def get_name(self):

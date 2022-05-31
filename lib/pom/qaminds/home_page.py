@@ -26,9 +26,9 @@ class HomePage(BasePage):
         return self._get_element(self._logo).is_displayed()
 
     def search(self, text: str):
-        """Search product.
+        """test_search product.
 
-        :param text: Product name.
+        :param text: test_product name.
         :return: None
         """
         self._write(self._input_search, text)
@@ -82,7 +82,7 @@ class HomePage(BasePage):
     def select_product(self, name: str):
         """Select product by name
 
-        :param name: Product display name.
+        :param name: test_product display name.
         :return: None
         """
         loc = (By.LINK_TEXT, name)

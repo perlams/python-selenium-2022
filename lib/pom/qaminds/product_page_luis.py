@@ -10,7 +10,7 @@ class ProductPage(BasePage):
     price = (By.XPATH, "//*[@id='content']//li/h2")
     # TODO - Improve XPATH, remove text dependency
     ex_tax = (By.XPATH, "//li[contains(normalize-space(.), 'Ex Tax:')]")
-    product_code = (By.XPATH, "//li[contains(normalize-space(.), 'Product Code:')]")
+    product_code = (By.XPATH, "//li[contains(normalize-space(.), 'test_product Code:')]")
     availability = (By.XPATH, "//li[contains(normalize-space(.), 'Availability:')]")
     description = (By.XPATH, "//*[@id='tab-description']/div")
     add_to_cart_loc = (By.ID, "button-cart")

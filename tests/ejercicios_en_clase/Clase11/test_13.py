@@ -1,6 +1,6 @@
 # Ejercicio 13
 # Buscar la palabra "Display", validar que se muestra un mensaje de que no existen productos con la busqueda.
-# Seleccionar la opción "Search in product descriptions" y volver a realizar la busqueda anterio, validar que ahora se muestran 4 resultados.
+# Seleccionar la opción "test_search in product descriptions" y volver a realizar la busqueda anterio, validar que ahora se muestran 4 resultados.
 
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
@@ -24,13 +24,13 @@ class TestSearch:
         self.driver.get((config.get_url()))
 
     def test_display_search(self):
-        # Search Input
+        # test_search Input
         searchInput_loc = (By.NAME, "search")
         searchInput: WebElement = self.wait.until(EC.element_to_be_clickable(searchInput_loc))
         searchInput.clear()
         searchInput.send_keys("Display")
 
-        #Search Button
+        #test_search Button
         lookUpBtn_loc = (By.CSS_SELECTOR, ".btn-default")
         lookUpBtn: WebElement = self.wait.until(EC.element_to_be_clickable(lookUpBtn_loc))
         lookUpBtn.click()
@@ -47,7 +47,7 @@ class TestSearch:
         checkboxDescription.click()
         assert checkboxDescription.is_selected()
 
-        #Search Button
+        #test_search Button
         searchBtn_loc = (By.ID, "button-search")
         searchBtn: WebElement = self.wait.until(EC.element_to_be_clickable(searchBtn_loc))
         searchBtn.click()

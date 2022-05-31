@@ -24,7 +24,7 @@ class TestProductPage:
         assert ex_tax == "$200.00"
 
         prod_code = self.prod_page.get_product_code()[14:]
-        assert prod_code == "Product 6"
+        assert prod_code == "test_product 6"
 
         prod_availability = self.prod_page.get_availability()[14:]
         assert prod_availability == "In Stock"
